@@ -4,41 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingrid Cristina | Desenvolvedora Front-end</title>
-    
-    <!-- Google Fonts: Inter para um visual limpo e moderno -->
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Ícones: Phosphor Icons (Leve e moderno) -->
+   
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
+
     <style>
-        /* ==========================================================================
-           1. VARIÁVEIS CSS (Design System)
-           ========================================================================== */
         :root {
-            --bg-color: #0f172a;        /* Fundo principal (Slate 900) */
-            --bg-surface: #1e293b;      /* Fundo de cards (Slate 800) */
-            --primary-color: #6366f1;   /* Cor de destaque (Indigo 500) */
-            --primary-hover: #4f46e5;   /* Hover destaque (Indigo 600) */
-            --text-main: #f8fafc;       /* Texto principal (Slate 50) */
-            --text-muted: #94a3b8;      /* Texto secundário (Slate 400) */
-            --border-color: #334155;    /* Bordas sutis */
-            
+            --bg-color: #0f172a;        
+            --bg-surface: #1e293b;      
+            --primary-hover: #4f46e5;  
+            --text-main: #f8fafc;      
+            --text-muted: #94a3b8;      
+            --border-color: #334155;  
             --font-main: 'Inter', sans-serif;
             --transition: all 0.3s ease;
         }
 
-        /* ==========================================================================
-           2. RESET BÁSICO E TIPOGRAFIA
-           ========================================================================== */
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             scroll-behavior: smooth;
         }
+
 
         body {
             font-family: var(--font-main);
@@ -48,26 +42,30 @@
             overflow-x: hidden;
         }
 
+
         a {
             text-decoration: none;
             color: inherit;
         }
 
+
         ul {
             list-style: none;
         }
+
 
         img {
             max-width: 100%;
             display: block;
         }
 
-        /* Classes Utilitárias */
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
         }
+
 
         .section-title {
             font-size: 2.5rem;
@@ -77,17 +75,17 @@
             position: relative;
         }
 
+
         .section-title span {
             color: var(--primary-color);
         }
+
 
         section {
             padding: 6rem 0;
         }
 
-        /* ==========================================================================
-           3. COMPONENTES: NAVEGAÇÃO
-           ========================================================================== */
+
         header {
             position: fixed;
             top: 0;
@@ -99,12 +97,14 @@
             transition: var(--transition);
         }
 
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             height: 80px;
         }
+
 
         .logo {
             font-size: 1.5rem;
@@ -113,14 +113,17 @@
             color: var(--text-main);
         }
 
+
         .logo span {
             color: var(--primary-color);
         }
+
 
         .nav-links {
             display: flex;
             gap: 2rem;
         }
+
 
         .nav-links a {
             font-size: 0.95rem;
@@ -130,12 +133,13 @@
             position: relative;
         }
 
+
         .nav-links a:hover,
         .nav-links a.active {
             color: var(--primary-color);
         }
 
-        /* Botão do menu mobile */
+
         .mobile-toggle {
             display: none;
             font-size: 1.8rem;
@@ -145,19 +149,19 @@
             border: none;
         }
 
-        /* ==========================================================================
-           4. SEÇÃO: HERO (INÍCIO)
-           ========================================================================== */
+
         #inicio {
             height: 100vh;
             display: flex;
             align-items: center;
-            padding-top: 80px; /* Compensa o header fixo */
+            padding-top: 80px;
         }
+
 
         .hero-content {
             max-width: 800px;
         }
+
 
         .hero-subtitle {
             color: var(--primary-color);
@@ -169,6 +173,7 @@
             display: block;
         }
 
+
         .hero-title {
             font-size: clamp(3rem, 5vw, 4.5rem);
             font-weight: 700;
@@ -176,12 +181,14 @@
             margin-bottom: 1.5rem;
         }
 
+
         .hero-description {
             font-size: 1.2rem;
             color: var(--text-muted);
             margin-bottom: 2.5rem;
             max-width: 600px;
         }
+
 
         .btn {
             display: inline-flex;
@@ -196,10 +203,12 @@
             border: 2px solid transparent;
         }
 
+
         .btn-primary {
             background-color: var(--primary-color);
             color: #fff;
         }
+
 
         .btn-primary:hover {
             background-color: var(--primary-hover);
@@ -207,25 +216,26 @@
             box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
         }
 
+
         .btn-outline {
             background-color: transparent;
             color: var(--text-main);
             border-color: var(--border-color);
         }
 
+
         .btn-outline:hover {
             border-color: var(--text-main);
             transform: translateY(-2px);
         }
+
 
         .hero-buttons {
             display: flex;
             gap: 1rem;
         }
 
-        /* ==========================================================================
-           5. SEÇÃO: SOBRE MIM
-           ========================================================================== */
+
         .sobre-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -233,11 +243,13 @@
             align-items: center;
         }
 
+
         .sobre-texto p {
             color: var(--text-muted);
             font-size: 1.1rem;
             margin-bottom: 1.5rem;
         }
+
 
         .sobre-destaques {
             display: grid;
@@ -245,6 +257,7 @@
             gap: 1.5rem;
             margin-top: 2rem;
         }
+
 
         .destaque-item {
             background-color: var(--bg-surface);
@@ -256,22 +269,25 @@
             gap: 1rem;
         }
 
+
         .destaque-item i {
             font-size: 2rem;
             color: var(--primary-color);
         }
+
 
         .destaque-item h4 {
             font-size: 1rem;
             font-weight: 600;
         }
 
+
         .sobre-imagem {
             position: relative;
             border-radius: 20px;
             overflow: hidden;
         }
-        
+       
         .sobre-imagem::before {
             content: '';
             position: absolute;
@@ -282,6 +298,7 @@
             opacity: 0.3;
         }
 
+
         .sobre-imagem img {
             border-radius: 20px;
             border: 1px solid var(--border-color);
@@ -290,14 +307,13 @@
             object-fit: cover;
         }
 
-        /* ==========================================================================
-           6. SEÇÃO: HABILIDADES
-           ========================================================================== */
+
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
         }
+
 
         .skill-card {
             background-color: var(--bg-surface);
@@ -307,11 +323,13 @@
             transition: var(--transition);
         }
 
+
         .skill-card:hover {
             transform: translateY(-5px);
             border-color: var(--primary-color);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
+
 
         .skill-header {
             display: flex;
@@ -320,27 +338,32 @@
             margin-bottom: 1rem;
         }
 
+
         .skill-info {
             display: flex;
             align-items: center;
             gap: 0.8rem;
         }
 
+
         .skill-info i {
             font-size: 1.8rem;
             color: var(--primary-color);
         }
+
 
         .skill-info h3 {
             font-size: 1.1rem;
             font-weight: 600;
         }
 
+
         .skill-percentage {
             color: var(--text-muted);
             font-weight: 500;
             font-size: 0.9rem;
         }
+
 
         .progress-bar {
             width: 100%;
@@ -350,6 +373,7 @@
             overflow: hidden;
         }
 
+
         .progress {
             height: 100%;
             background-color: var(--primary-color);
@@ -358,14 +382,13 @@
             transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1);
         }
 
-        /* ==========================================================================
-           7. SEÇÃO: PROJETOS
-           ========================================================================== */
+
         .projetos-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 2rem;
         }
+
 
         .projeto-card {
             background-color: var(--bg-surface);
@@ -377,11 +400,13 @@
             flex-direction: column;
         }
 
+
         .projeto-card:hover {
             transform: translateY(-8px);
             border-color: var(--text-muted);
             box-shadow: 0 20px 40px rgba(0,0,0, 0.3);
         }
+
 
         .projeto-img {
             width: 100%;
@@ -391,13 +416,16 @@
             transition: var(--transition);
         }
 
+
         .projeto-card:hover .projeto-img {
             transform: scale(1.05);
         }
 
+
         .projeto-img-wrapper {
             overflow: hidden;
         }
+
 
         .projeto-content {
             padding: 1.5rem;
@@ -406,11 +434,13 @@
             flex-direction: column;
         }
 
+
         .projeto-title {
             font-size: 1.25rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
+
 
         .projeto-desc {
             color: var(--text-muted);
@@ -419,12 +449,14 @@
             flex-grow: 1;
         }
 
+
         .projeto-techs {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
             margin-bottom: 1.5rem;
         }
+
 
         .tech-tag {
             background-color: rgba(99, 102, 241, 0.1);
@@ -435,10 +467,12 @@
             font-weight: 500;
         }
 
+
         .projeto-links {
             display: flex;
             gap: 1rem;
         }
+
 
         .projeto-links a {
             flex: 1;
@@ -450,12 +484,14 @@
             transition: var(--transition);
         }
 
+
         .link-live {
             background-color: var(--primary-color);
             color: #fff;
         }
-        
+       
         .link-live:hover { background-color: var(--primary-hover); }
+
 
         .link-code {
             background-color: transparent;
@@ -463,11 +499,10 @@
             color: var(--text-main);
         }
 
+
         .link-code:hover { border-color: var(--text-main); }
 
-        /* ==========================================================================
-           8. SEÇÃO: CONTATO
-           ========================================================================== */
+
         .contato-wrapper {
             display: grid;
             grid-template-columns: 1fr 2fr;
@@ -478,21 +513,25 @@
             border: 1px solid var(--border-color);
         }
 
+
         .contato-info h3 {
             font-size: 1.8rem;
             margin-bottom: 1rem;
         }
+
 
         .contato-info p {
             color: var(--text-muted);
             margin-bottom: 2rem;
         }
 
+
         .social-links {
             display: flex;
             gap: 1rem;
             margin-top: 2rem;
         }
+
 
         .social-links a {
             display: flex;
@@ -508,11 +547,13 @@
             transition: var(--transition);
         }
 
+
         .social-links a:hover {
             background-color: var(--primary-color);
             border-color: var(--primary-color);
             transform: translateY(-3px);
         }
+
 
         .contato-form {
             display: flex;
@@ -520,17 +561,20 @@
             gap: 1.5rem;
         }
 
+
         .form-group {
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
         }
 
+
         .form-group label {
             font-size: 0.9rem;
             font-weight: 500;
             color: var(--text-muted);
         }
+
 
         .form-group input,
         .form-group textarea {
@@ -544,6 +588,7 @@
             transition: var(--transition);
         }
 
+
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
@@ -551,12 +596,13 @@
             box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
         }
 
+
         .form-group textarea {
             resize: vertical;
             min-height: 150px;
         }
 
-        /* Mensagem de Feedback do Formulário */
+
         .form-feedback {
             display: none;
             padding: 1rem;
@@ -568,9 +614,7 @@
             font-weight: 500;
         }
 
-        /* ==========================================================================
-           9. RODAPÉ
-           ========================================================================== */
+
         footer {
             text-align: center;
             padding: 2rem 0;
@@ -579,27 +623,25 @@
             font-size: 0.9rem;
         }
 
+
         footer span {
             color: var(--primary-color);
         }
 
-        /* ==========================================================================
-           10. ANIMAÇÕES GERAIS (Ativadas via Intersection Observer)
-           ========================================================================== */
+
         .reveal {
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.8s ease-out;
         }
 
+
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
 
-        /* ==========================================================================
-           11. RESPONSIVIDADE (Mobile First adaptado via media queries descendentes)
-           ========================================================================== */
+
         @media (max-width: 992px) {
             .sobre-grid,
             .contato-wrapper {
@@ -611,11 +653,13 @@
             }
         }
 
+
         @media (max-width: 768px) {
             .mobile-toggle {
                 display: block;
                 z-index: 1001;
             }
+
 
             .nav-links {
                 position: fixed;
@@ -632,22 +676,26 @@
                 border-left: 1px solid var(--border-color);
             }
 
+
             .nav-links.active {
                 right: 0;
             }
+
 
             .hero-title {
                 font-size: 2.5rem;
             }
 
+
             .hero-buttons {
                 flex-direction: column;
             }
 
+
             .contato-wrapper {
                 padding: 2rem 1.5rem;
             }
-            
+           
             section {
                 padding: 4rem 0;
             }
@@ -656,7 +704,7 @@
 </head>
 <body>
 
-    <!-- CABEÇALHO & NAVEGAÇÃO -->
+
     <header id="header">
         <div class="container">
             <nav>
@@ -675,12 +723,13 @@
         </div>
     </header>
 
+
     <main>
-        <!-- SEÇÃO: HERO -->
+       
         <section id="inicio">
             <div class="container">
                 <div class="hero-content reveal">
-                    <span class="hero-subtitle">Olá, eu sou a</span>
+                    <span class="hero-subtitle">Olá, eu sou</span>
                     <h1 class="hero-title">Ingrid Cristina</h1>
                     <p class="hero-description">
                         Desenvolvedora Front-end apaixonada por transformar ideias em experiências digitais inovadoras, acessíveis e de alto desempenho.
@@ -693,7 +742,7 @@
             </div>
         </section>
 
-        <!-- SEÇÃO: SOBRE MIM -->
+
         <section id="sobre">
             <div class="container">
                 <h2 class="section-title reveal">Sobre <span>mim</span></h2>
@@ -705,39 +754,41 @@
                         <p>
                             Estou sempre em busca de aprender novas tecnologias e adotar boas práticas de mercado, como mobile-first e acessibilidade, garantindo que o produto final chegue com excelência a todos os usuários.
                         </p>
-                        
+                       
                         <div class="sobre-destaques">
                             <div class="destaque-item">
-                                <i class="ph ph-devices"></i>
-                                <h4>Design Responsivo</h4>
+                                <i class="ph ph-graduation-cap"></i>
+                                <h4>Formação Fundamental</h4>
+                               
+                             
                             </div>
                             <div class="destaque-item">
-                                <i class="ph ph-code-block"></i>
-                                <h4>Clean Code</h4>
+                                <i class="ph ph-briefcase"></i>
+                                <h4>Experiência Profissional</h4>
+                               
+                         
                             </div>
                         </div>
                     </div>
-                    
+                   
                     <div class="sobre-imagem reveal">
-                        <!-- Imagem placeholder profissional usando gradiente e tons abstratos via Placehold.co -->
                         <img src="https://placehold.co/600x600/1e293b/6366f1?text=IC&font=Inter" alt="Foto profissional de Ingrid Cristina">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SEÇÃO: HABILIDADES -->
+
         <section id="habilidades">
             <div class="container">
                 <h2 class="section-title reveal">Minhas <span>Habilidades</span></h2>
                 <div class="skills-grid">
-                    
-                    <!-- Skill 1 -->
+                   
                     <div class="skill-card reveal">
                         <div class="skill-header">
                             <div class="skill-info">
                                 <i class="ph ph-file-html"></i>
-                                <h3>HTML5</h3>
+                                <h3>HTML</h3>
                             </div>
                             <span class="skill-percentage">95%</span>
                         </div>
@@ -746,12 +797,12 @@
                         </div>
                     </div>
 
-                    <!-- Skill 2 -->
+
                     <div class="skill-card reveal">
                         <div class="skill-header">
                             <div class="skill-info">
                                 <i class="ph ph-file-css"></i>
-                                <h3>CSS3</h3>
+                                <h3>CSS</h3>
                             </div>
                             <span class="skill-percentage">90%</span>
                         </div>
@@ -760,7 +811,7 @@
                         </div>
                     </div>
 
-                    <!-- Skill 3 -->
+
                     <div class="skill-card reveal">
                         <div class="skill-header">
                             <div class="skill-info">
@@ -774,7 +825,7 @@
                         </div>
                     </div>
 
-                    <!-- Skill 4 -->
+
                     <div class="skill-card reveal">
                         <div class="skill-header">
                             <div class="skill-info">
@@ -788,28 +839,28 @@
                         </div>
                     </div>
 
+
                 </div>
             </div>
         </section>
 
-        <!-- SEÇÃO: PROJETOS -->
+
         <section id="projetos">
             <div class="container">
                 <h2 class="section-title reveal">Meus <span>Projetos</span></h2>
                 <div class="projetos-grid">
-                    
-                    <!-- Projeto 1 -->
+                   
                     <article class="projeto-card reveal">
                         <div class="projeto-img-wrapper">
-                            <img src="https://placehold.co/600x400/0f172a/6366f1?text=Eventos+App" alt="Sistema de gestão de eventos" class="projeto-img">
+                            <img src="https://placehold.co/600x400/0f172a/6366f1?text=Climbing" alt="Climbing" class="projeto-img">
                         </div>
                         <div class="projeto-content">
-                            <h3 class="projeto-title">EventMaster: Gestão de Eventos</h3>
-                            <p class="projeto-desc">Uma plataforma completa para organização, visualização de cronogramas e venda fictícia de ingressos para eventos corporativos e shows.</p>
+                            <h3 class="projeto-title">Climbing</h3>
+                            <p class="projeto-desc">Site focado em fazer pequenas empresas crescerem através do marketing digital.</p>
                             <div class="projeto-techs">
-                                <span class="tech-tag">HTML5</span>
-                                <span class="tech-tag">CSS3 (Grid/Flex)</span>
-                                <span class="tech-tag">JavaScript Puro</span>
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
                             </div>
                             <div class="projeto-links">
                                 <a href="#" class="link-live" aria-label="Ver projeto online"><i class="ph ph-globe"></i> Ver Projeto</a>
@@ -818,18 +869,18 @@
                         </div>
                     </article>
 
-                    <!-- Projeto 2 -->
+
+                   
                     <article class="projeto-card reveal">
                         <div class="projeto-img-wrapper">
-                            <img src="https://placehold.co/600x400/0f172a/6366f1?text=Drinks+Landing" alt="Landing page Drinks e Eventos" class="projeto-img">
+                            <img src="https://placehold.co/600x400/0f172a/6366f1?text=Loja+Esportiva" alt="Loja Esportiva" class="projeto-img">
                         </div>
                         <div class="projeto-content">
-                            <h3 class="projeto-title">Drinks & Eventos - Landing Page</h3>
-                            <p class="projeto-desc">Landing page moderna e altamente conversiva desenvolvida para uma agência de bartenders, focada em animações de rolagem e UI/UX atraente.</p>
+                            <h3 class="projeto-title">Loja Esportiva</h3>
+                            <p class="projeto-desc">Loja que vende materias esportivos.</p>
                             <div class="projeto-techs">
-                                <span class="tech-tag">HTML5 Semântico</span>
-                                <span class="tech-tag">CSS Animations</span>
-                                <span class="tech-tag">Intersection Observer</span>
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
                             </div>
                             <div class="projeto-links">
                                 <a href="#" class="link-live"><i class="ph ph-globe"></i> Ver Projeto</a>
@@ -838,18 +889,17 @@
                         </div>
                     </article>
 
-                    <!-- Projeto 3 -->
+
                     <article class="projeto-card reveal">
                         <div class="projeto-img-wrapper">
-                            <img src="https://placehold.co/600x400/0f172a/6366f1?text=Dashboard+Admin" alt="Dashboard Administrativo" class="projeto-img">
+                            <img src="https://placehold.co/600x400/0f172a/6366f1?text=h%26e" alt="h&e" class="projeto-img">
                         </div>
                         <div class="projeto-content">
-                            <h3 class="projeto-title">Dashboard Analítico Moderno</h3>
-                            <p class="projeto-desc">Painel administrativo responsivo contendo simulação de gestão de usuários, análise de métricas financeiras e componentes visuais complexos.</p>
-                            <div class="projeto-techs">
-                                <span class="tech-tag">JavaScript (DOM)</span>
-                                <span class="tech-tag">CSS Variáveis</span>
-                                <span class="tech-tag">Chart.js Fictício</span>
+                            <h3 class="projeto-title">h&e</h3>
+                            <p class="projeto-desc">empresa de serviço de Hidráulica e Eletricidade.</p>
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
                             </div>
                             <div class="projeto-links">
                                 <a href="#" class="link-live"><i class="ph ph-globe"></i> Ver Projeto</a>
@@ -858,40 +908,21 @@
                         </div>
                     </article>
 
-                    <!-- Projeto 4 -->
-                    <article class="projeto-card reveal">
-                        <div class="projeto-img-wrapper">
-                            <img src="https://placehold.co/600x400/0f172a/6366f1?text=To-Do+Avancado" alt="To-do app avançado" class="projeto-img">
-                        </div>
-                        <div class="projeto-content">
-                            <h3 class="projeto-title">TaskFlow: To-Do App Avançado</h3>
-                            <p class="projeto-desc">Aplicação de gerenciamento de tarefas com filtros por status, categorização, sistema de prioridades e persistência de dados utilizando Local Storage.</p>
-                            <div class="projeto-techs">
-                                <span class="tech-tag">Lógica de Programação</span>
-                                <span class="tech-tag">Local Storage API</span>
-                                <span class="tech-tag">Manipulação de Array</span>
-                            </div>
-                            <div class="projeto-links">
-                                <a href="#" class="link-live"><i class="ph ph-globe"></i> Ver Projeto</a>
-                                <a href="#" class="link-code"><i class="ph ph-github-logo"></i> Código</a>
-                            </div>
-                        </div>
-                    </article>
 
                 </div>
             </div>
         </section>
 
-        <!-- SEÇÃO: CONTATO -->
+
         <section id="contato">
             <div class="container">
                 <h2 class="section-title reveal">Vamos <span>Conversar?</span></h2>
-                
+               
                 <div class="contato-wrapper reveal">
                     <div class="contato-info">
                         <h3>Pronta para o próximo desafio</h3>
                         <p>Estou atualmente aberta a novas oportunidades de trabalho. Seja para uma vaga full-time, projetos freelance ou apenas para fazer networking, sinta-se à vontade para me mandar uma mensagem!</p>
-                        
+                       
                         <div class="social-links">
                             <a href="#" aria-label="Acessar GitHub"><i class="ph ph-github-logo"></i></a>
                             <a href="#" aria-label="Acessar LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
@@ -899,26 +930,28 @@
                         </div>
                     </div>
 
+
                     <form class="contato-form" id="contactForm">
                         <div class="form-group">
                             <label for="nome">Nome Completo</label>
                             <input type="text" id="nome" name="nome" placeholder="Ex: João da Silva" required>
                         </div>
-                        
+                       
                         <div class="form-group">
                             <label for="email">E-mail</label>
                             <input type="email" id="email" name="email" placeholder="Ex: joao@email.com" required>
                         </div>
-                        
+                       
                         <div class="form-group">
                             <label for="mensagem">Mensagem</label>
                             <textarea id="mensagem" name="mensagem" placeholder="Como posso te ajudar?" required></textarea>
                         </div>
 
-                        <!-- Feedback de envio (oculto por padrão) -->
+
                         <div class="form-feedback" id="formFeedback">
                             Mensagem enviada com sucesso! Entrarei em contato em breve.
                         </div>
+
 
                         <button type="submit" class="btn btn-primary" id="submitBtn">
                             <i class="ph ph-paper-plane-right"></i> Enviar Mensagem
@@ -929,23 +962,24 @@
         </section>
     </main>
 
+
     <footer>
         <div class="container">
             <p>&copy; <span id="currentYear"></span> Ingrid Cristina. Desenvolvido com <i class="ph-fill ph-heart" style="color: var(--primary-color);"></i> e código puro.</p>
         </div>
     </footer>
 
-    <!-- LÓGICA JAVASCRIPT -->
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            
-            // 1. Atualizar ano do Footer
+           
             document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-            // 2. Menu Mobile Interativo
+
             const mobileToggle = document.getElementById('mobile-toggle');
             const navLinks = document.getElementById('nav-links');
             const toggleIcon = mobileToggle.querySelector('i');
+
 
             function toggleMenu() {
                 navLinks.classList.toggle('active');
@@ -956,9 +990,10 @@
                 }
             }
 
+
             mobileToggle.addEventListener('click', toggleMenu);
 
-            // Fechar menu mobile ao clicar em um link
+
             document.querySelectorAll('.nav-links a').forEach(link => {
                 link.addEventListener('click', () => {
                     if (navLinks.classList.contains('active')) {
@@ -967,7 +1002,7 @@
                 });
             });
 
-            // 3. Efeito Sombra no Header ao rolar a página
+
             const header = document.getElementById('header');
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 50) {
@@ -977,13 +1012,13 @@
                 }
             });
 
-            // 4. Scroll Suave para links internos
+
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href');
                     if (targetId === '#') return;
-                    
+                   
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
                         targetElement.scrollIntoView({
@@ -994,49 +1029,51 @@
                 });
             });
 
-            // 5. Observer de Scroll (Animações Reveal e Barras de Progresso)
+
             const observerOptions = {
-                threshold: 0.1, // Dispara quando 10% do elemento é visível
+                threshold: 0.1, 
                 rootMargin: "0px 0px -50px 0px"
             };
+
 
             const scrollObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        // Revelar elementos
+                       
                         entry.target.classList.add('active');
-                        
-                        // Se for uma barra de progresso, animar a largura
+                       
+                       
                         const progressBar = entry.target.querySelector('.progress');
                         if (progressBar) {
                             const width = progressBar.getAttribute('data-width');
                             progressBar.style.width = width;
                         }
-                        
-                        // Opcional: parar de observar após revelar (para animar só na 1ª vez)
-                        // observer.unobserve(entry.target); 
+                       
                     }
                 });
             }, observerOptions);
+
 
             document.querySelectorAll('.reveal').forEach(el => {
                 scrollObserver.observe(el);
             });
 
-            // Highlight de link ativo no menu baseado no scroll
+
             const sections = document.querySelectorAll('section');
             const navItems = document.querySelectorAll('.nav-links a');
+
 
             window.addEventListener('scroll', () => {
                 let current = '';
                 sections.forEach(section => {
                     const sectionTop = section.offsetTop;
                     const sectionHeight = section.clientHeight;
-                    // Ajuste de offset do header
+       
                     if (scrollY >= (sectionTop - 150)) {
                         current = section.getAttribute('id');
                     }
                 });
+
 
                 navItems.forEach(li => {
                     li.classList.remove('active');
@@ -1046,39 +1083,41 @@
                 });
             });
 
-            // 6. Simulação do Formulário de Contato
+
             const form = document.getElementById('contactForm');
             const feedback = document.getElementById('formFeedback');
             const submitBtn = document.getElementById('submitBtn');
             const btnOriginalHtml = submitBtn.innerHTML;
 
-            form.addEventListener('submit', (e) => {
-                e.preventDefault(); // Impede o recarregamento da página
 
-                // Efeito visual de carregamento no botão
+            form.addEventListener('submit', (e) => {
+                e.preventDefault(); 
+
+
                 submitBtn.innerHTML = '<i class="ph ph-spinner ph-spin"></i> Enviando...';
                 submitBtn.disabled = true;
 
-                // Simula uma requisição assíncrona (ex: envio para API) usando setTimeout
+
                 setTimeout(() => {
-                    // Restaura botão
+                  
                     submitBtn.innerHTML = btnOriginalHtml;
                     submitBtn.disabled = false;
-                    
-                    // Mostra mensagem de sucesso
+                   
+                  
                     feedback.style.display = 'block';
-                    
-                    // Limpa os campos
+                  
                     form.reset();
 
-                    // Esconde a mensagem de sucesso após 5 segundos
+
                     setTimeout(() => {
                         feedback.style.display = 'none';
                     }, 5000);
 
-                }, 1500); // 1.5 segundos de simulação
+
+                }, 1500); 
             });
         });
     </script>
 </body>
 </html>
+
